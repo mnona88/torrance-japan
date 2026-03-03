@@ -1,9 +1,9 @@
-<!DOCTYPE html>　
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Torrance No.1 Restaurant — Digital Growth Proposal</title>
+  <title>サウスベイレストラン — デジタル成長提案書</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -23,32 +23,23 @@
       --gray: #777;
       --gray-light: #aaa;
     }
-
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
     body {
       background-color: var(--black);
       color: var(--white);
-      font-family: 'Noto Sans JP', sans-serif;
-      line-height: 1.75;
+      font-family: 'Noto Sans JP', 'Montserrat', sans-serif;
+      line-height: 1.85;
       overflow-x: hidden;
     }
-
-    /* ─────────────────────────────────────
-       UTILITIES
-    ───────────────────────────────────── */
     .gold-text {
       background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light), var(--gold));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     .red-text { color: var(--red-soft); }
     .green-text { color: var(--green-bright); }
-
     .label {
       display: inline-block;
       font-family: 'Montserrat', sans-serif;
@@ -59,60 +50,36 @@
       color: var(--gold);
       margin-bottom: 18px;
     }
-
-    .label::before {
-      content: '— ';
-      opacity: 0.5;
-    }
-    .label::after {
-      content: ' —';
-      opacity: 0.5;
-    }
-
-    .container {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 0 28px;
-    }
-
-    .section {
-      padding: 110px 0;
-    }
-
+    .label::before { content: '— '; opacity: 0.5; }
+    .label::after { content: ' —'; opacity: 0.5; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
     .section-title {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-weight: 900;
-      font-size: clamp(28px, 4.5vw, 50px);
-      line-height: 1.15;
+      font-size: clamp(24px, 4vw, 46px);
+      line-height: 1.25;
       margin-bottom: 22px;
     }
-
     .section-lead {
-      font-size: clamp(15px, 1.8vw, 18px);
+      font-size: clamp(14px, 1.7vw, 17px);
       color: var(--gray-light);
       max-width: 680px;
       font-weight: 300;
-      line-height: 1.9;
+      line-height: 2;
     }
 
-    /* ─────────────────────────────────────
-       HERO
-    ───────────────────────────────────── */
+    /* HERO */
     .hero {
-      min-height:auto;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 64px 28px 44px;
+      padding: 72px 28px 56px;
       position: relative;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(201,168,76,0.12) 0%, transparent 70%),
-        var(--black);
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(201,168,76,0.12) 0%, transparent 70%), var(--black);
       overflow: hidden;
     }
-
     .hero::after {
       content: '';
       position: absolute;
@@ -120,154 +87,98 @@
       height: 1px;
       background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent);
     }
-
     .hero-eyebrow {
-      font-family: 'Montserrat', sans-serif;
       font-size: 11px;
       font-weight: 600;
-      letter-spacing: 5px;
+      letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 36px;
       opacity: 0.85;
+      font-family: 'Montserrat', sans-serif;
     }
-
     .hero-headline {
       font-family: 'Noto Sans JP', sans-serif;
       font-weight: 900;
-      font-size: clamp(28px, 4.6vw, 60px);
-      line-height: 1.03;
-letter-spacing: -0.01em;
-      margin-bottom: 24px;
-      max-width: 1040px;
+      font-size: clamp(26px, 4.5vw, 58px);
+      line-height: 1.2;
+      margin-bottom: 28px;
+      max-width: 960px;
     }
-
     .hero-headline .dead {
       position: relative;
       display: inline-block;
     }
-
     .hero-headline .dead::after {
       content: '';
       position: absolute;
-      left: 0; right: 0;
-      top: 50%;
-      height: 3px;
+      left: 0; right: 0; top: 50%;
+      height: 4px;
       background: var(--red-soft);
-      transform: rotate(-2deg);
+      transform: rotate(-1.5deg);
     }
-
     .hero-sub {
-      font-size: clamp(16px, 2vw, 22px);
+      font-size: clamp(15px, 1.9vw, 19px);
       color: var(--gray-light);
       font-weight: 300;
-      max-width: 700px;
-      margin-bottom: 20px;
-      line-height: 1.8;
+      max-width: 720px;
+      margin-bottom: 24px;
+      line-height: 2;
     }
-
-    .hero-sub strong {
-      color: var(--white);
-      font-weight: 700;
-    }
-
+    .hero-sub strong { color: var(--white); font-weight: 700; }
     .hero-tagline {
-      font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      font-size: clamp(15px, 2vw, 20px);
+      font-size: clamp(14px, 1.8vw, 18px);
       color: var(--gold-light);
       margin-bottom: 52px;
-      letter-spacing: 1px;
     }
-
-    .hero-cta-wrap {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
+    .hero-cta-wrap { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
     .btn-gold {
       background: linear-gradient(135deg, #7a5c18, var(--gold), var(--gold-light));
       color: #000;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-weight: 700;
       font-size: 14px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
+      letter-spacing: 1px;
       padding: 18px 48px;
       border-radius: 3px;
       text-decoration: none;
       box-shadow: 0 0 32px rgba(201,168,76,0.4);
       transition: transform 0.2s, box-shadow 0.2s;
-display: inline-flex;
-align-items: center;
-justify-content: center;
-white-space: nowrap;
-line-height: 1;
-
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      line-height: 1;
     }
-
-    .btn-gold:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 40px rgba(201,168,76,0.55);
-    }
-
+    .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 8px 40px rgba(201,168,76,0.55); }
     .btn-outline {
       border: 1px solid rgba(201,168,76,0.5);
       color: var(--gold);
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Noto Sans JP', sans-serif;
       font-weight: 600;
       font-size: 14px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
       padding: 18px 48px;
       border-radius: 3px;
       text-decoration: none;
       transition: background 0.2s, color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .btn-outline:hover { background: rgba(201,168,76,0.1); border-color: var(--gold); }
+    .cta-micro {
+      font-size: 11px;
+      color: var(--gray);
+      letter-spacing: 0.3px;
+      margin-top: 12px;
+      text-align: center;
+      font-weight: 400;
     }
 
-    .btn-outline:hover {
-      background: rgba(201,168,76,0.1);
-      border-color: var(--gold);
-    }
-
-    .hero-scroll {
-      position: absolute;
-      bottom: 36px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      color: rgba(201,168,76,0.5);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 9px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
-
-    .hero-scroll-line {
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(180deg, rgba(201,168,76,0.6), transparent);
-      animation: scrollLine 1.8s ease-in-out infinite;
-    }
-
-    @keyframes scrollLine {
-      0%, 100% { transform: scaleY(1); opacity: 1; }
-      50% { transform: scaleY(0.5); opacity: 0.4; }
-    }
-
-    /* ─────────────────────────────────────
-       PAIN SECTION — 損失の可視化
-    ───────────────────────────────────── */
+    /* PAIN */
     .pain-section {
       background: linear-gradient(180deg, var(--black) 0%, #0e0700 50%, var(--black) 100%);
       padding: 110px 0;
     }
-
     .pain-alert {
       background: linear-gradient(135deg, rgba(224,48,48,0.12), rgba(224,48,48,0.04));
       border: 1px solid rgba(224,48,48,0.35);
@@ -276,26 +187,16 @@ line-height: 1;
       padding: 36px 44px;
       margin-bottom: 70px;
     }
-
     .pain-alert-headline {
-      font-family: 'Montserrat', sans-serif;
       font-weight: 900;
-      font-size: clamp(18px, 2.5vw, 26px);
+      font-size: clamp(16px, 2.2vw, 24px);
       color: var(--red-soft);
       margin-bottom: 14px;
     }
-
-    .pain-alert p {
-      color: #ccc;
-      font-size: 16px;
-      line-height: 1.9;
-    }
-
+    .pain-alert p { color: #ccc; font-size: 15px; line-height: 2; }
     .pain-alert p strong { color: var(--white); }
 
-    /* ─────────────────────────────────────
-       PHOTO PROOF BLOCK
-    ───────────────────────────────────── */
+    /* PHOTO PROOF */
     .photo-proof {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -305,962 +206,254 @@ line-height: 1;
       margin-bottom: 70px;
       border: 1px solid rgba(255,255,255,0.06);
     }
-
-    @media (max-width: 640px) {
-      .photo-proof { grid-template-columns: 1fr; }
-    }
-
-    .photo-proof-side {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .photo-proof-side img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
+    @media (max-width: 640px) { .photo-proof { grid-template-columns: 1fr; } }
+    .photo-proof-side { position: relative; overflow: hidden; }
+    .photo-proof-side img { width: 100%; display: block; object-fit: cover; }
     .photo-proof-overlay {
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      display: flex; flex-direction: column; justify-content: flex-end;
       padding: 24px;
       background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%);
     }
-
     .photo-proof-tag {
       font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 2px;
-      display: inline-block;
-      margin-bottom: 10px;
-      width: fit-content;
+      font-weight: 900; font-size: 11px; letter-spacing: 3px;
+      text-transform: uppercase; padding: 6px 14px; border-radius: 2px;
+      display: inline-block; margin-bottom: 10px; width: fit-content;
     }
-
-    .photo-proof-tag.before {
-      background: rgba(224,48,48,0.9);
-      color: #fff;
-    }
-
-    .photo-proof-tag.after {
-      background: rgba(39,174,96,0.9);
-      color: #fff;
-    }
-
-    .photo-proof-stat {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
-      color: #fff;
-    }
-
+    .photo-proof-tag.before { background: rgba(224,48,48,0.9); color: #fff; }
+    .photo-proof-tag.after { background: rgba(39,174,96,0.9); color: #fff; }
+    .photo-proof-stat { font-weight: 700; font-size: 14px; color: #fff; }
     .photo-proof-stat.red { color: #ff9999; }
     .photo-proof-stat.green { color: #7effa0; }
 
-    /* ─────────────────────────────────────
-       STATS ROW
-    ───────────────────────────────────── */
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      margin-bottom: 70px;
-    }
-
-    @media (max-width: 700px) {
-      .stats-row { grid-template-columns: 1fr; }
-    }
-
+    /* STATS */
+    .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-bottom: 70px; }
+    @media (max-width: 700px) { .stats-row { grid-template-columns: 1fr; } }
     .stat-box {
-      background: var(--dark2);
-      padding: 44px 32px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      transition: background 0.3s;
+      background: var(--dark2); padding: 44px 32px; text-align: center;
+      position: relative; overflow: hidden; transition: background 0.3s;
     }
-
     .stat-box:hover { background: var(--dark3); }
-
     .stat-box::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
-
-    .stat-num {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: clamp(48px, 6vw, 72px);
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-
-    .stat-desc {
-      font-size: 14px;
-      color: var(--gray-light);
-      line-height: 1.6;
-    }
-
+    .stat-num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: clamp(48px, 6vw, 72px); line-height: 1; margin-bottom: 10px; }
+    .stat-desc { font-size: 13px; color: var(--gray-light); line-height: 1.7; }
     .stat-desc strong { color: var(--white); }
 
-    /* ─────────────────────────────────────
-       BEFORE / AFTER SECTION
-    ───────────────────────────────────── */
-    .ba-section {
-      background: var(--dark);
-      padding: 110px 0;
-    }
-
-    .ba-block {
-      margin-bottom: 120px;
-    }
-
+    /* BEFORE/AFTER */
+    .ba-section { background: var(--dark); padding: 110px 0; }
+    .ba-block { margin-bottom: 120px; }
     .ba-block:last-child { margin-bottom: 0; }
-
-    .ba-number {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: 80px;
-      line-height: 1;
-      color: rgba(201,168,76,0.08);
-      margin-bottom: -20px;
-      display: block;
-    }
-
-    .ba-block-title {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: clamp(22px, 3.5vw, 38px);
-      margin-bottom: 10px;
-    }
-
-    .ba-block-lead {
-      color: var(--gray-light);
-      font-size: 16px;
-      max-width: 680px;
-      margin-bottom: 48px;
-      line-height: 1.9;
-    }
-
+    .ba-number { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 80px; line-height: 1; color: rgba(201,168,76,0.08); margin-bottom: -20px; display: block; }
+    .ba-block-title { font-weight: 900; font-size: clamp(20px, 3vw, 34px); margin-bottom: 10px; }
+    .ba-block-lead { color: var(--gray-light); font-size: 15px; max-width: 680px; margin-bottom: 48px; line-height: 2; }
     .ba-block-lead strong { color: var(--white); }
-
-    .ba-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3px;
-      border-radius: 14px;
-      overflow: hidden;
-    }
-
-    @media (max-width: 720px) {
-      .ba-grid { grid-template-columns: 1fr; }
-    }
-
-    .ba-col {
-      position: relative;
-    }
-
-    .ba-col-header {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      padding: 14px 24px;
-      text-align: center;
-    }
-
-    .ba-col-header.before {
-      background: #2a0808;
-      color: #ff9999;
-      border-top: 2px solid rgba(224,48,48,0.5);
-    }
-
-    .ba-col-header.after {
-      background: #082a14;
-      color: #7effa0;
-      border-top: 2px solid rgba(39,174,96,0.5);
-    }
-
-    .ba-col img {
-      width: 100%;
-      display: block;
-    }
-
-    .ba-metrics {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    @media (max-width: 500px) {
-      .ba-metrics { grid-template-columns: 1fr; }
-    }
-
-    .ba-metric {
-      background: var(--dark2);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 8px;
-      padding: 20px 22px;
-      border-left: 3px solid var(--gold);
-    }
-
-    .ba-metric-label {
-      font-size: 11px;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 6px;
-    }
-
-    .ba-metric-value {
-      font-size: 15px;
-      color: #ccc;
-      line-height: 1.6;
-    }
-
+    .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; border-radius: 14px; overflow: hidden; }
+    @media (max-width: 720px) { .ba-grid { grid-template-columns: 1fr; } }
+    .ba-col-header { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; padding: 14px 24px; text-align: center; }
+    .ba-col-header.before { background: #2a0808; color: #ff9999; border-top: 2px solid rgba(224,48,48,0.5); }
+    .ba-col-header.after { background: #082a14; color: #7effa0; border-top: 2px solid rgba(39,174,96,0.5); }
+    .ba-col img { width: 100%; display: block; }
+    .ba-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 28px; }
+    @media (max-width: 500px) { .ba-metrics { grid-template-columns: 1fr; } }
+    .ba-metric { background: var(--dark2); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 20px 22px; border-left: 3px solid var(--gold); }
+    .ba-metric-label { font-size: 10px; font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .ba-metric-value { font-size: 14px; color: #ccc; line-height: 1.7; }
     .ba-metric-value strong { color: var(--white); }
 
-    /* ─────────────────────────────────────
-       AI SECTION
-    ───────────────────────────────────── */
+    /* AI SECTION */
     .ai-section {
       background: linear-gradient(135deg, #050510 0%, #0a0a1a 50%, #050510 100%);
       padding: 110px 0;
       border-top: 1px solid rgba(100,100,255,0.1);
       border-bottom: 1px solid rgba(100,100,255,0.1);
     }
-
     .ai-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(100,100,255,0.1);
-      border: 1px solid rgba(100,100,255,0.32);
-      border-radius: 999px;
-      padding: 10px 24px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      color: #b3b3ff;
-      margin-bottom: 32px;
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(100,100,255,0.1); border: 1px solid rgba(100,100,255,0.32);
+      border-radius: 999px; padding: 10px 24px;
+      font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase; color: #b3b3ff; margin-bottom: 32px;
     }
-
     .ai-quote {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: clamp(20px, 3vw, 32px);
-      line-height: 1.4;
-      margin-bottom: 32px;
-      color: var(--white);
-      border-left: 3px solid #6666ff;
-      padding-left: 28px;
+      font-weight: 700; font-size: clamp(18px, 2.8vw, 30px); line-height: 1.6;
+      margin-bottom: 32px; color: var(--white);
+      border-left: 3px solid #6666ff; padding-left: 28px;
     }
-
-    .ai-quote em {
-      font-style: normal;
-      color: #ff9999;
-    }
-
-    .ai-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3px;
-      margin-top: 56px;
-      border-radius: 14px;
-      overflow: hidden;
-    }
-
-    @media (max-width: 720px) {
-      .ai-grid { grid-template-columns: 1fr; }
-    }
-
-    .ai-col-header {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 12px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      padding: 14px 24px;
-      text-align: center;
-    }
-
-    .ai-col-header.before {
-      background: #1a0a0a;
-      color: #ff9999;
-      border-top: 2px solid rgba(224,48,48,0.4);
-    }
-
-    .ai-col-header.after {
-      background: #0a0a1a;
-      color: #9999ff;
-      border-top: 2px solid rgba(100,100,255,0.5);
-    }
-
-    .ai-col img {
-      width: 100%;
-      display: block;
-    }
-
+    .ai-quote em { font-style: normal; color: #ff9999; }
+    .ai-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; margin-top: 56px; border-radius: 14px; overflow: hidden; }
+    @media (max-width: 720px) { .ai-grid { grid-template-columns: 1fr; } }
+    .ai-col-header { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 3px; text-transform: uppercase; padding: 14px 24px; text-align: center; }
+    .ai-col-header.before { background: #1a0a0a; color: #ff9999; border-top: 2px solid rgba(224,48,48,0.4); }
+    .ai-col-header.after { background: #0a0a1a; color: #9999ff; border-top: 2px solid rgba(100,100,255,0.5); }
+    .ai-col img { width: 100%; display: block; }
     .ai-fact {
-      background: rgba(100,100,255,0.06);
-      border: 1px solid rgba(100,100,255,0.2);
-      border-radius: 10px;
-      padding: 28px 32px;
-      margin-top: 40px;
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
+      background: rgba(100,100,255,0.06); border: 1px solid rgba(100,100,255,0.2);
+      border-radius: 10px; padding: 28px 32px; margin-top: 40px;
     }
-
-    .ai-fact-icon {
-      font-size: 32px;
-      flex-shrink: 0;
-    }
-
-    .ai-fact-text {
-      font-size: 16px;
-      color: #ccc;
-      line-height: 1.8;
-    }
-
+    .ai-fact-text { font-size: 15px; color: #ccc; line-height: 1.9; }
     .ai-fact-text strong { color: #9999ff; }
 
-    /* ─────────────────────────────────────
-       ROI NUMBERS SECTION
-    ───────────────────────────────────── */
-    .roi-numbers {
-      background: var(--black);
-      padding: 110px 0;
-    }
-
-    .roi-table-wrap {
-      overflow-x: auto;
-      margin-top: 56px;
-    }
-
-    .roi-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 15px;
-    }
-
-    .roi-table thead tr {
-      background: var(--dark3);
-    }
-
-    .roi-table th {
-      padding: 18px 24px;
-      text-align: left;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      border-bottom: 2px solid rgba(201,168,76,0.25);
-      white-space: nowrap;
-    }
-
-    .roi-table td {
-      padding: 18px 24px;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      color: #ccc;
-      vertical-align: middle;
-    }
-
+    /* ROI */
+    .roi-numbers { background: var(--black); padding: 110px 0; }
+    .roi-table-wrap { overflow-x: auto; margin-top: 56px; }
+    .roi-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .roi-table thead tr { background: var(--dark3); }
+    .roi-table th { padding: 18px 20px; text-align: left; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); border-bottom: 2px solid rgba(201,168,76,0.25); white-space: nowrap; }
+    .roi-table td { padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #ccc; vertical-align: middle; }
     .roi-table tr:hover td { background: rgba(201,168,76,0.03); }
-
-    .roi-table .metric-name {
-      color: var(--white);
-      font-weight: 500;
-    }
-
+    .roi-table .metric-name { color: var(--white); font-weight: 500; }
     .roi-table .before-val { color: #ff9999; }
     .roi-table .after-val { color: var(--green-bright); font-weight: 700; }
+    .roi-table .arrow { color: var(--gold); font-size: 18px; text-align: center; }
 
-    .roi-table .arrow {
-      color: var(--gold);
-      font-size: 18px;
-      text-align: center;
-    }
-
-    .roi-cards-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 3px;
-      margin-top: 3px;
-    }
-
-    .roi-card {
-      background: var(--dark2);
-      padding: 48px 36px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      transition: background 0.3s;
-    }
-
-    .roi-card:hover { background: var(--dark3); }
-
-    .roi-card.featured {
-      background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.04));
-      border: 1px solid rgba(201,168,76,0.3);
-    }
-
-    .roi-card-badge {
-      position: absolute;
-      top: 0; left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-      color: #000;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 10px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 5px 20px;
-      white-space: nowrap;
-    }
-
-    .roi-card-plan {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 24px;
-      margin-top: 16px;
-    }
-
-    .roi-card-price {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: 60px;
-      color: var(--white);
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-
-    .roi-card-period {
-      font-size: 13px;
-      color: var(--gray);
-      margin-bottom: 32px;
-    }
-
-    .roi-card-features {
-      list-style: none;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 36px;
-    }
-
-    .roi-card-features li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 14px;
-      color: #bbb;
-    }
-
-    .roi-card-features li::before {
-      content: '✓';
-      color: var(--gold);
-      font-weight: 700;
-      font-family: 'Montserrat', sans-serif;
-      flex-shrink: 0;
-    }
-
-    /* ─────────────────────────────────────
-       PLAN TIMELINE
-    ───────────────────────────────────── */
-    .plan-section {
-      background: var(--dark);
-      padding: 110px 0;
-    }
-
-    .timeline {
-      position: relative;
-      margin-top: 64px;
-    }
-
+    /* PLAN TIMELINE */
+    .plan-section { background: var(--dark); padding: 110px 0; }
+    .timeline { position: relative; margin-top: 64px; }
     .timeline::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 8px;
-      bottom: 0;
-      width: 1px;
+      content: ''; position: absolute; left: 0; top: 8px; bottom: 0; width: 1px;
       background: linear-gradient(180deg, var(--gold) 0%, rgba(201,168,76,0.2) 80%, transparent 100%);
     }
-
-    .tl-item {
-      padding-left: 40px;
-      padding-bottom: 60px;
-      position: relative;
-    }
-
+    .tl-item { padding-left: 40px; padding-bottom: 60px; position: relative; }
     .tl-item:last-child { padding-bottom: 0; }
+    .tl-dot { position: absolute; left: -5px; top: 6px; width: 11px; height: 11px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 14px rgba(201,168,76,0.7); }
+    .tl-phase { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .tl-title { font-weight: 700; font-size: 18px; margin-bottom: 16px; }
+    .tl-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .tl-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: #bbb; }
+    .tl-list li::before { content: '→'; color: var(--gold); flex-shrink: 0; }
 
-    .tl-dot {
-      position: absolute;
-      left: -5px;
-      top: 6px;
-      width: 11px;
-      height: 11px;
-      border-radius: 50%;
-      background: var(--gold);
-      box-shadow: 0 0 14px rgba(201,168,76,0.7);
-    }
-
-    .tl-phase {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 10px;
-    }
-
-    .tl-title {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 20px;
-      margin-bottom: 16px;
-    }
-
-    .tl-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .tl-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 15px;
-      color: #bbb;
-    }
-
-    .tl-list li::before {
-      content: '→';
-      color: var(--gold);
-      flex-shrink: 0;
-    }
-
-    /* ─────────────────────────────────────
-       GUARANTEE
-    ───────────────────────────────────── */
-    .guarantee-section {
-      background: linear-gradient(135deg, #030d06, #080808, #030d06);
-      padding: 110px 0;
-      border-top: 1px solid rgba(39,174,96,0.15);
-    }
-
-    .guarantee-box {
-      background: rgba(39,174,96,0.05);
-      border: 1px solid rgba(39,174,96,0.25);
-      border-radius: 16px;
-      padding: 64px;
-      text-align: center;
-    }
-
-    @media (max-width: 600px) {
-      .guarantee-box { padding: 40px 24px; }
-    }
-
-    .guarantee-icon {
-      font-size: 56px;
-      margin-bottom: 24px;
-    }
-
-    .guarantee-title {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: clamp(22px, 3.5vw, 36px);
-      color: var(--green-bright);
-      margin-bottom: 20px;
-    }
-
-    .guarantee-text {
-      font-size: 17px;
-      color: #bbb;
-      max-width: 640px;
-      margin: 0 auto 40px;
-      line-height: 1.9;
-    }
-
+    /* GUARANTEE */
+    .guarantee-section { background: linear-gradient(135deg, #030d06, #080808, #030d06); padding: 110px 0; border-top: 1px solid rgba(39,174,96,0.15); }
+    .guarantee-box { background: rgba(39,174,96,0.05); border: 1px solid rgba(39,174,96,0.25); border-radius: 16px; padding: 64px; text-align: center; }
+    @media (max-width: 600px) { .guarantee-box { padding: 40px 24px; } }
+    .guarantee-icon { font-size: 56px; margin-bottom: 24px; }
+    .guarantee-title { font-weight: 900; font-size: clamp(20px, 3vw, 34px); color: var(--green-bright); margin-bottom: 20px; }
+    .guarantee-text { font-size: 16px; color: #bbb; max-width: 640px; margin: 0 auto 40px; line-height: 2; }
     .guarantee-text strong { color: var(--white); }
-
-    .compare-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 64px;
-      font-size: 15px;
-    }
-
-    .compare-table thead tr {
-      background: var(--dark3);
-    }
-
-    .compare-table th {
-      padding: 16px 22px;
-      text-align: left;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gold);
-      border-bottom: 2px solid rgba(201,168,76,0.2);
-    }
-
-    .compare-table td {
-      padding: 16px 22px;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      color: #bbb;
-      vertical-align: top;
-    }
-
+    .compare-table { width: 100%; border-collapse: collapse; margin-top: 64px; font-size: 14px; }
+    .compare-table thead tr { background: var(--dark3); }
+    .compare-table th { padding: 16px 22px; text-align: left; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); border-bottom: 2px solid rgba(201,168,76,0.2); }
+    .compare-table td { padding: 16px 22px; border-bottom: 1px solid rgba(255,255,255,0.05); color: #bbb; vertical-align: top; }
     .compare-table tr:hover td { background: rgba(201,168,76,0.02); }
     .compare-table .feat { color: var(--white); font-weight: 500; }
     .compare-table .yes { color: var(--green-bright); }
     .compare-table .no { color: #ff7777; }
 
-    /* ─────────────────────────────────────
-       URGENCY
-    ───────────────────────────────────── */
-    .urgency-section {
-      background: linear-gradient(135deg, #1a0000, #0a0a0a, #1a0000);
-      padding: 90px 28px;
-      text-align: center;
-      border-top: 1px solid rgba(224,48,48,0.2);
-      border-bottom: 1px solid rgba(224,48,48,0.2);
-    }
-
-    .urgency-title {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: clamp(24px, 4vw, 46px);
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .urgency-body {
-      font-size: 17px;
-      color: var(--gray-light);
-      max-width: 620px;
-      margin: 0 auto 48px;
-      line-height: 1.9;
-    }
-
+    /* URGENCY */
+    .urgency-section { background: linear-gradient(135deg, #1a0000, #0a0a0a, #1a0000); padding: 90px 28px; text-align: center; border-top: 1px solid rgba(224,48,48,0.2); border-bottom: 1px solid rgba(224,48,48,0.2); }
+    .urgency-title { font-weight: 900; font-size: clamp(22px, 3.8vw, 44px); line-height: 1.3; margin-bottom: 20px; }
+    .urgency-body { font-size: 16px; color: var(--gray-light); max-width: 640px; margin: 0 auto 48px; line-height: 2; }
     .urgency-body strong { color: var(--white); }
+    .counters { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; margin-bottom: 52px; }
+    .counter { text-align: center; }
+    .counter-num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 52px; color: var(--red-soft); line-height: 1; }
+    .counter-lbl { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--gray); margin-top: 6px; }
 
-    .counters {
-      display: flex;
-      justify-content: center;
-      gap: 48px;
-      flex-wrap: wrap;
-      margin-bottom: 52px;
-    }
-    .counter {
-      text-align: center;
-    }
+    /* FINAL CTA */
+    .cta-section { background: var(--dark2); padding: 110px 28px; text-align: center; }
+    .cta-title { font-weight: 900; font-size: clamp(26px, 4.5vw, 52px); line-height: 1.25; margin-bottom: 20px; }
+    .cta-body { font-size: 17px; color: var(--gray-light); max-width: 580px; margin: 0 auto 52px; line-height: 2; font-weight: 300; }
+    .contact-card { display: inline-flex; flex-direction: column; align-items: center; gap: 22px; background: var(--dark3); border: 1px solid rgba(201,168,76,0.25); border-radius: 16px; padding: 52px 72px; max-width: 480px; width: 100%; }
+    @media (max-width: 560px) { .contact-card { padding: 36px 24px; } }
+    .contact-row { display: flex; align-items: center; gap: 16px; font-size: 16px; color: var(--white); width: 100%; }
+    .contact-ico { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--gold-dark), var(--gold)); display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
 
-    .counter-num {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: 52px;
-      color: var(--red-soft);
-      line-height: 1;
-    }
+    /* FOOTER */
+    footer { background: var(--black); border-top: 1px solid rgba(201,168,76,0.08); padding: 44px 28px; text-align: center; color: var(--gray); font-size: 13px; }
+    .footer-brand { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 18px; margin-bottom: 10px; }
+    .gold-line { width: 60px; height: 2px; background: linear-gradient(90deg, var(--gold-dark), var(--gold)); margin: 0 auto 40px; }
 
-    .counter-lbl {
-      font-size: 11px;
-      font-family: 'Montserrat', sans-serif;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--gray);
-      margin-top: 6px;
-    }
-
-    /* ─────────────────────────────────────
-       FINAL CTA
-    ───────────────────────────────────── */
-    .cta-section {
-      background: var(--dark2);
-      padding: 110px 28px;
-      text-align: center;
-    }
-
-    .cta-title {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: clamp(28px, 5vw, 56px);
-      line-height: 1.15;
-      margin-bottom: 20px;
-    }
-
-    .cta-body {
-      font-size: 18px;
-      color: var(--gray-light);
-      max-width: 580px;
-      margin: 0 auto 52px;
-      line-height: 1.9;
-      font-weight: 300;
-    }
-
-    .contact-card {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: left;
-      gap: 22px;
-      background: var(--dark3);
-      border: 1px solid rgba(201,168,76,0.25);
-      border-radius: 16px;
-      padding: 52px 72px;
-      max-width: 480px;
-      width: 100%;
-    }
-
-    @media (max-width: 560px) {
-      .contact-card { padding: 36px 24px; }
-    }
-
-    .contact-row {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 16px;
-      font-size: 17px;
-      color: var(--white);
-      width: 100%;
-    }
-
-    .contact-ico {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 17px;
-      flex-shrink: 0;
-    }
-
-    /* ─────────────────────────────────────
-       FOOTER
-    ───────────────────────────────────── */
-    footer {
-      background: var(--black);
-      border-top: 1px solid rgba(201,168,76,0.08);
-      padding: 44px 28px;
-      text-align: center;
-      color: var(--gray);
-      font-size: 13px;
-    }
-
-    .footer-brand {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 900;
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    /* ─────────────────────────────────────
-       SCROLL ANIMATIONS
-    ───────────────────────────────────── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.75s ease, transform 0.75s ease;
-    }
-
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.75s ease, transform 0.75s ease; }
     .reveal.in { opacity: 1; transform: translateY(0); }
 
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
+    /* SIMULATOR */
+    .simulator-section { padding: 80px 20px; background-color: var(--dark2); display: flex; justify-content: center; }
+    .sim-container { max-width: 800px; width: 100%; background: var(--dark3); border: 1px solid var(--gold-dark); border-radius: 12px; padding: 40px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+    .sim-badge { display: inline-block; color: var(--black); background-color: var(--gold); padding: 4px 14px; font-size: 12px; font-weight: 700; text-transform: uppercase; border-radius: 20px; margin-bottom: 16px; font-family: 'Montserrat', sans-serif; }
+    .sim-header h2 { font-size: 24px; color: var(--white); margin-bottom: 12px; }
+    .sim-header p { color: var(--gray-light); font-size: 14px; margin-bottom: 30px; line-height: 1.8; }
+    .sim-controls { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-bottom: 20px; }
+    .sim-select { padding: 14px 20px; font-size: 15px; border-radius: 6px; background-color: var(--dark4); color: var(--white); border: 1px solid #444; outline: none; flex: 1; min-width: 200px; font-family: inherit; }
+    .sim-select:focus { border-color: var(--gold); }
+    .sim-btn { padding: 14px 30px; font-size: 15px; flex: 1; min-width: 200px; cursor: pointer; border: none; }
+    .sim-result { margin-top: 30px; padding-top: 30px; border-top: 1px dashed #444; }
+    .sim-result.hidden { display: none; }
+    .sim-result-text { color: var(--gray-light); font-size: 13px; text-transform: uppercase; letter-spacing: 1px; font-family: 'Montserrat', sans-serif; }
+    .sim-amount { font-family: 'Montserrat', sans-serif; font-size: 48px; color: var(--red-soft); font-weight: 900; margin: 10px 0; text-shadow: 0 0 10px rgba(224,48,48,0.3); }
+    .sim-warning { color: var(--white); font-size: 15px; line-height: 1.8; }
+    .sim-warning .highlight { color: var(--gold); font-weight: 700; }
 
-    /* ─────────────────────────────────────
-       DIVIDER
-    ───────────────────────────────────── */
-    .gold-line {
-      width: 60px;
-      height: 2px;
-      background: linear-gradient(90deg, var(--gold-dark), var(--gold));
-      margin: 0 auto 40px;
-    }
-.ai-fact-icon { display: none; }
-.ai-fact { gap: 0; }
-
-/* ─────────────────────────────────────
-   損失シミュレーター
-───────────────────────────────────── */
-.simulator-section {
-  padding: 80px 20px;
-  background-color: var(--dark2);
-  display: flex;
-  justify-content: center;
-}
-.sim-container {
-  max-width: 800px;
-  width: 100%;
-  background: var(--dark3);
-  border: 1px solid var(--gold-dark);
-  border-radius: 12px;
-  padding: 40px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-.sim-badge {
-  display: inline-block;
-  color: var(--black);
-  background-color: var(--gold);
-  padding: 4px 12px;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  border-radius: 20px;
-  margin-bottom: 16px;
-}
-.sim-header h2 {
-  font-size: 28px;
-  color: var(--white);
-  margin-bottom: 12px;
-}
-.sim-header p {
-  color: var(--gray-light);
-  font-size: 14px;
-  margin-bottom: 30px;
-}
-.sim-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-.sim-select {
-  padding: 14px 20px;
-  font-size: 16px;
-  border-radius: 6px;
-  background-color: var(--dark4);
-  color: var(--white);
-  border: 1px solid #444;
-  outline: none;
-  flex: 1;
-  min-width: 200px;
-  font-family: inherit;
-}
-.sim-select:focus { border-color: var(--gold); }
-.sim-btn {
-  padding: 14px 30px;
-  font-size: 16px;
-  flex: 1;
-  min-width: 200px;
-  cursor: pointer;
-  border: none;
-}
-.sim-result {
-  margin-top: 30px;
-  padding-top: 30px;
-  border-top: 1px dashed #444;
-  transition: opacity 0.5s ease;
-}
-.sim-result.hidden { display: none; opacity: 0; }
-.sim-result-text {
-  color: var(--gray-light);
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.sim-amount {
-  font-size: 48px;
-  color: var(--red-soft);
-  font-weight: 900;
-  margin: 10px 0;
-  text-shadow: 0 0 10px rgba(224, 48, 48, 0.3);
-}
-.sim-warning { color: var(--white); font-size: 15px; line-height: 1.6; }
-.sim-warning .highlight { color: var(--gold); font-weight: 700; }
-</style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KGZN1TXBQL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KGZN1TXBQL');
-</script>
+    /* PRICING */
+    .new-pricing-row { display: flex; flex-wrap: wrap; gap: 3px; justify-content: center; margin-top: 64px; }
+    .np-card { background: var(--dark2); border: 1px solid rgba(255,255,255,0.07); border-radius: 0; padding: 44px 32px; width: 100%; max-width: 340px; text-align: center; position: relative; transition: background 0.3s, transform 0.3s; flex: 1 1 280px; }
+    .np-card:hover { background: var(--dark3); transform: translateY(-4px); }
+    .np-card.popular { background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.04)); border: 1px solid rgba(201,168,76,0.4); transform: scale(1.03); z-index: 2; }
+    .np-card.popular:hover { transform: scale(1.03) translateY(-4px); }
+    .np-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--gold-dark), var(--gold)); color: #000; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 5px 18px; border-radius: 999px; white-space: nowrap; }
+    .np-card h3 { font-weight: 900; font-size: 17px; color: var(--white); margin: 8px 0 6px; }
+    .np-card .np-sub { font-size: 12px; color: var(--gray); margin-bottom: 20px; }
+    .np-anchor { font-size: 13px; color: var(--gray); text-decoration: line-through; height: 18px; margin-bottom: 4px; }
+    .np-setup { font-size: 12px; color: var(--gray-light); margin-bottom: 4px; }
+    .np-price { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 52px; color: var(--white); line-height: 1; margin-bottom: 4px; }
+    .np-price span { font-size: 0.38em; color: var(--gray); font-weight: 400; }
+    .popular .np-price { color: var(--gold-light); }
+    .np-features { list-style: none; padding: 0; margin: 24px 0 28px; text-align: left; display: flex; flex-direction: column; gap: 11px; }
+    .np-features li { font-size: 13px; color: #bbb; padding-left: 22px; position: relative; line-height: 1.6; }
+    .np-features li::before { content: '✓'; color: var(--gold); font-weight: 700; position: absolute; left: 0; }
+    .np-features li.off { color: #555; }
+    .np-features li.off::before { content: '✕'; color: #444; }
+    .np-microcopy { font-size: 10px; color: rgba(255,255,255,0.3); margin-top: 10px; font-style: italic; }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KGZN1TXBQL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KGZN1TXBQL');
+  </script>
 </head>
 <body>
 
-<!-- ═══════════════════════════════════════
-     HERO
-═══════════════════════════════════════ -->
+<!-- HERO -->
 <section class="hero" id="top">
-  <div class="hero-eyebrow">Torrance Restaurant — Confidential Proposal</div>
-
+  <div class="hero-eyebrow">サウスベイレストラン — デジタル成長提案書（秘密厳守）</div>
   <h1 class="hero-headline">
-    貴店の『最高の料理』が、<br/>
-    デジタル上で<span class="dead" style="color:var(--red-soft);">"死んで"</span>いる<br/>
-    損失に気づいていますか？
+    お料理は一流。<br/>
+    でも今、あなたのお店はオンラインで<span class="dead" style="color:var(--red-soft);">見えていない</span>。<br/>
+    ——その間にも、売上は静かに消えています。
   </h1>
-
   <p class="hero-sub">
-    今この瞬間、<strong>87%以上のお客様がスマートフォンとAIでレストランを選んでいます。</strong><br/>
-    デジタルの見せ方が最適化されていないだけで、毎日数十万円規模の機会損失が静かに積み重なっています。
+    <strong>飲食店を選ぶ際、87%以上のお客様がスマホまたはAIアシスタントを利用しています。</strong><br/>
+    デジタル上の存在感が弱いままでは、毎週何十人ものお客様と、数千ドルの売上が、<br/>近くの競合店へと流れ続けています。
   </p>
-
   <p class="hero-tagline">
-    Torranceで“選ばれる店”へ。AIにも推薦されやすい店へ。
+    サウスベイで「まず最初に見つかる・選ばれる・足を運ばれる」お店をつくりませんか？
   </p>
-
   <div class="hero-cta-wrap">
-    <a href="#contact" class="btn-gold">今すぐ無料診断を受ける</a>
-    <a href="#before-after" class="btn-outline">実績・数字を見る</a>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+      <a href="#contact" class="btn-gold">無料診断を受ける — 完全無料・ご提案なし</a>
+      <p class="cta-micro">データに基づく分析のみ。押し売りは一切ありません。24時間以内にPDFレポートをお届けします。</p>
+    </div>
+    <a href="#before-after" class="btn-outline">実績と数値を見る</a>
   </div>
-
 </section>
 
-<!-- ═══════════════════════════════════════
-     損失シミュレーター（Heroセクション直下）
-═══════════════════════════════════════ -->
+<!-- SIMULATOR -->
 <section class="simulator-section reveal" id="simulator">
   <div class="sim-container">
     <div class="sim-header">
       <span class="sim-badge">Interactive Audit</span>
-      <h2>毎月いくら損していますか？</h2>
-      <p>エリアと料理ジャンルを選ぶだけで、デジタル最適化をしていないことで<br/>毎月どれくらいの売上を競合に奪われているか、すぐわかります。</p>
+      <h2>あなたの「機会損失額」を今すぐ計算する</h2>
+      <p>エリアとジャンルを選択するだけで、検索上位に表示されないことで毎月どれだけの売上を失っているかがわかります。</p>
     </div>
     <div class="sim-controls">
       <select id="sim-city" class="sim-select">
-        <option value="" disabled selected>エリアを選んでください</option>
+        <option value="" disabled selected>エリアを選択</option>
         <option value="Torrance">Torrance</option>
         <option value="Redondo Beach">Redondo Beach</option>
         <option value="Hermosa Beach">Hermosa Beach</option>
@@ -1268,594 +461,592 @@ line-height: 1;
         <option value="Gardena">Gardena</option>
       </select>
       <select id="sim-cuisine" class="sim-select">
-        <option value="" disabled selected>ジャンルを選んでください</option>
+        <option value="" disabled selected>ジャンルを選択</option>
         <option value="イタリアン">イタリアン</option>
         <option value="メキシカン">メキシカン</option>
-        <option value="韓国料理">韓国料理</option>
-        <option value="寿司・日本料理">寿司・日本料理</option>
-        <option value="アメリカン・バーガー">アメリカン・バーガー</option>
+        <option value="シーフード">シーフード</option>
+        <option value="和食・寿司">和食・寿司</option>
+        <option value="アメリカン">アメリカン</option>
       </select>
-      <button class="btn-gold sim-btn" onclick="calculateLoss()">損失額を見る →</button>
+      <button class="btn-gold sim-btn" onclick="calculateLoss()">損失額を表示する</button>
     </div>
     <div id="sim-result" class="sim-result hidden">
-      <p class="sim-result-text">競合に奪われている推定月間売上損失額：</p>
+      <p class="sim-result-text">競合店に流れている推定月間損失売上：</p>
       <h3 id="sim-amount" class="sim-amount">$0</h3>
       <p class="sim-warning">
-        今この瞬間も、<span id="res-city" class="highlight">...</span>で<span id="res-cuisine" class="highlight">...</span>を探しているお客様が、あなたの競合を選んでいます。<br/>
-        <strong>今すぐ損失を止めましょう。</strong>
+        今この瞬間も、<span id="res-city" class="highlight">...</span> で<span id="res-cuisine" class="highlight">...</span>を探しているお客様が、競合店を選んでいます。<strong>この流出を、今日止めてください。</strong>
       </p>
     </div>
   </div>
 </section>
 
-
-<!-- ═══════════════════════════════════════
-     PAIN — 損失の可視化
-═══════════════════════════════════════ -->
+<!-- PAIN -->
 <div class="pain-section">
   <div class="container">
     <div class="reveal">
       <span class="label">The Problem</span>
       <h2 class="section-title">
-        なぜ今、あなたのお店は<br/>
-        見えないお客様を<span class="gold-text">逃し続けているのか</span>
+        なぜ、あなたのお店は<br/>
+        <span class="gold-text">気づかないうちにお客様を失い続けているのか</span>
       </h2>
       <p class="section-lead" style="margin-bottom: 56px;">
-        料理の質・サービス・立地——すべてが揃っていても、デジタル上での「見せ方」が最適化されていなければ、
-        お客様はあなたのお店を素通りします。これは才能の問題ではなく、<strong style="color:var(--white)">戦略の問題</strong>です。
+        料理が素晴らしくても、サービスが完璧でも、立地が良くても——デジタル上の存在感が弱ければ、お客様はあなたのお店にたどり着く前に競合を選んでしまいます。料理の問題ではありません。<strong style="color:var(--white)">これは「見つけてもらえているか」の問題です。</strong>
       </p>
     </div>
-
-    <!-- LOSS INFOGRAPHIC -->
     <div class="reveal" style="margin-bottom: 56px;">
-      <img src="loss_infographic.jpg" alt="最適化しないと毎日損をしている" style="width:100%; border-radius:12px; display:block; border:1px solid rgba(201,168,76,0.2);" />
+      <img src="loss_infographic.jpg" alt="デジタル最適化なしによる売上損失" style="width:100%; border-radius:12px; display:block; border:1px solid rgba(201,168,76,0.2);" />
     </div>
-
     <div class="pain-alert reveal">
-      <div class="pain-alert-headline">⚠ 今日も、競合があなたの顧客を奪っています</div>
+      <div class="pain-alert-headline">⚠ 競合店は今この瞬間も、あなたのお客様を奪っています</div>
       <p>
-        Torrance の競合レストランがデジタル最適化を進める中、対策をしないお店は検索順位が下がり続け、
-        AIの推薦リストからも外れていきます。<strong>1ヶ月の放置 ＝ 競合に数ヶ月分のアドバンテージを与えること</strong>と同じです。
-        この差は、時間が経つほど取り戻せなくなります。
+        あなたがこれを読んでいる間にも、サウスベイ内の競合店はデジタル施策を着々と進めています。Google 順位を上げ、AI に推薦され、本来あなたを選んだはずのお客様を獲得しています。<strong>先手を打った店舗は顧客のロイヤルティを固め始めます。その差は時間が経つほど埋めにくくなります。</strong>
       </p>
     </div>
-
-    <!-- PHOTO PROOF -->
     <div class="reveal" style="margin-bottom: 32px;">
-      <h3 style="font-family:'Montserrat',sans-serif; font-weight:700; font-size:18px; color:var(--gray-light); margin-bottom:16px; letter-spacing:1px;">
-        📸 写真1枚で、指は止まるか止まらないかが決まる
+      <h3 style="font-weight:700; font-size:17px; color:var(--gray-light); margin-bottom:16px;">
+        📸 写真1枚が、「素通り」と「予約」を分けます
       </h3>
     </div>
     <div class="photo-proof reveal">
       <div class="photo-proof-side">
-        <img src="before_google.jpg" alt="最適化前のGoogle" style="filter: brightness(0.95);" />
+        <img src="before_google.jpg" alt="最適化前のGoogle掲載" style="filter: brightness(0.95);" />
         <div class="photo-proof-overlay">
           <span class="photo-proof-tag before">BEFORE</span>
-          <div class="photo-proof-stat red">この写真で、新規客の指は止まりません。<br/>クリック率 わずか 1.2%</div>
+          <div class="photo-proof-stat red">どこにでもある掲載と変わらない印象。<br/>クリック率：わずか 1.2%</div>
         </div>
       </div>
       <div class="photo-proof-side">
-        <img src="after_google.jpg" alt="最適化後のGoogle" />
+        <img src="after_google.jpg" alt="最適化後のGoogle掲載" />
         <div class="photo-proof-overlay">
           <span class="photo-proof-tag after">AFTER</span>
-          <div class="photo-proof-stat green">プロ写真30枚以上で指が止まる。<br/>クリック率 8.7% へ +625%</div>
+          <div class="photo-proof-stat green">プロ写真30枚以上でスクロールが止まる。<br/>クリック率：8.7%（+625%）</div>
         </div>
       </div>
     </div>
-
-    <!-- STATS -->
     <div class="stats-row reveal" style="margin-top: 3px;">
       <div class="stat-box">
         <div class="stat-num gold-text">42<span style="font-size:0.5em">%</span></div>
-        <div class="stat-desc">
-          <strong>Googleルート検索数</strong><br/>
-          写真刷新だけで増加する来店見込み客数
-        </div>
+        <div class="stat-desc"><strong>「経路を調べる」タップ数の増加</strong><br/>Google の写真ギャラリーを改善するだけで実現</div>
       </div>
       <div class="stat-box">
         <div class="stat-num gold-text">28<span style="font-size:0.5em">%</span></div>
-        <div class="stat-desc">
-          <strong>新規客来店率</strong><br/>
-          「保存されるSNS投稿」戦略による増加率
-        </div>
+        <div class="stat-desc"><strong>新規来店客数の増加</strong><br/>「保存したくなる」SNS コンテンツ戦略の効果</div>
       </div>
       <div class="stat-box">
-        <div class="stat-num" style="font-size:clamp(28px,4vw,48px); padding-top:12px;" >
-          <span class="gold-text">圏外</span><br/>
+        <div class="stat-num" style="font-size:clamp(28px,4vw,48px); padding-top:12px;">
+          <span class="gold-text">2ページ目</span><br/>
           <span style="font-size:0.5em; color:var(--gold);">→ TOP 3</span>
         </div>
-        <div class="stat-desc" style="margin-top:8px;">
-          <strong>検索順位の変化</strong><br/>
-          レビュー管理を徹底するだけで達成可能
-        </div>
+        <div class="stat-desc" style="margin-top:8px;"><strong>Google 検索順位の変化</strong><br/>レビュー管理の徹底だけで達成した実績</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     BEFORE / AFTER
-═══════════════════════════════════════ -->
+<!-- BEFORE / AFTER -->
 <div class="ba-section" id="before-after">
   <div class="container">
     <div class="reveal">
       <span class="label">Before / After</span>
       <h2 class="section-title">
-        これが「最適化」の<br/>
-        <span class="gold-text">リアルな差</span>です
+        最適化とは、具体的に<br/>
+        <span class="gold-text">何がどう変わることなのか</span>
       </h2>
       <p class="section-lead" style="margin-bottom: 32px;">
-        3つのプラットフォームで、最適化前後の差を比較してください。
-        この視覚的な差が、毎日の売上の差に直結しています。
+        サウスベイ内のお客様が「ここに行こう」と決める3つのプラットフォームで、Before / After を並べてお見せします。
       </p>
     </div>
 
-    <!-- BLOCK 1: GOOGLE -->
     <div class="ba-block reveal">
       <span class="ba-number">01</span>
-      <h3 class="ba-block-title">Google Business Profile</h3>
+      <h3 class="ba-block-title">Google ビジネスプロフィール</h3>
       <p class="ba-block-lead">
-        Google検索・マップで最初に表示されるプロフィールが、来店判断の<strong>9割を左右</strong>します。
-        写真・レビュー・メニュー・投稿——すべてを戦略的に最適化します。
+        新規のお客様の9割が、来店前に Google で検索します。<strong>プロ写真・完全なメニュー情報・戦略的キーワード・週次投稿</strong>を組み合わせ、Google が「信頼できる店舗」と判断するプロフィールに仕上げます。
       </p>
       <div class="ba-grid">
         <div class="ba-col">
-          <div class="ba-col-header before">BEFORE — 最適化前</div>
-          <img src="before_google.jpg" alt="Google最適化前" style="background:#fff;" />
+          <div class="ba-col-header before">BEFORE — 未最適化</div>
+          <img src="before_google.jpg" alt="最適化前" style="background:#fff;" />
         </div>
         <div class="ba-col">
-          <div class="ba-col-header after">AFTER — 最適化後</div>
-          <img src="after_google.jpg" alt="Google最適化後" />
+          <div class="ba-col-header after">AFTER — 完全最適化</div>
+          <img src="after_google.jpg" alt="最適化後" />
         </div>
       </div>
       <div class="ba-metrics">
         <div class="ba-metric">
           <div class="ba-metric-label">写真枚数</div>
-          <div class="ba-metric-value">2枚（低画質）→ <strong>30枚以上（プロ品質）</strong><br/>ルート検索数 +10〜30%</div>
+          <div class="ba-metric-value">ピンぼけ2枚 → <strong>プロ写真30枚以上</strong><br/>「経路を調べる」タップ 10〜30% 増</div>
         </div>
         <div class="ba-metric">
-          <div class="ba-metric-label">評価・レビュー数</div>
-          <div class="ba-metric-value">3.8★ 12件 → <strong>4.8★ 247件</strong><br/>検索順位 圏外 → TOP3</div>
+          <div class="ba-metric-label">レビュー・評価</div>
+          <div class="ba-metric-value">3.8★（12件）→ <strong>4.8★（247件）</strong><br/>検索順位：圏外 → トップ3</div>
         </div>
         <div class="ba-metric">
           <div class="ba-metric-label">メニュー掲載</div>
-          <div class="ba-metric-value">「No info」→ <strong>全メニュー・価格を完全掲載</strong><br/>来店前の安心感が大幅向上</div>
+          <div class="ba-metric-value">「情報なし」→ <strong>価格・説明付きの完全メニュー</strong><br/>来店前の離脱を大幅に減少</div>
         </div>
         <div class="ba-metric">
           <div class="ba-metric-label">週次投稿</div>
-          <div class="ba-metric-value">投稿ゼロ → <strong>週1回の新メニュー・イベント投稿</strong><br/>常に最新情報を提供</div>
+          <div class="ba-metric-value">ゼロ → <strong>メニュー・イベントを週次で投稿</strong><br/>継続的な更新 = Google の信頼スコア向上</div>
         </div>
       </div>
     </div>
 
-    <!-- BLOCK 2: INSTAGRAM -->
     <div class="ba-block reveal">
       <span class="ba-number">02</span>
-      <h3 class="ba-block-title">Instagram — 「行きたい」を生む SNS 戦略</h3>
+      <h3 class="ba-block-title">Instagram — スクロールしていた人を来店客へ</h3>
       <p class="ba-block-lead">
-        Instagramは現代の「口コミ」です。プロフィールを見た瞬間に<strong>「ここに行きたい」</strong>と
-        思わせるビジュアル戦略と、2タップで予約できる導線を構築します。
+        Instagram は現代の口コミです。3秒で「行ってみたい」と思わせるプロフィールと、<strong>タップ2回で予約完了できる導線</strong>を構築します。
       </p>
       <div class="ba-grid">
         <div class="ba-col">
-          <div class="ba-col-header before">BEFORE — 最適化前</div>
-          <img src="before_instagram.jpg" alt="Instagram最適化前" />
+          <div class="ba-col-header before">BEFORE — 未最適化</div>
+          <img src="before_instagram.jpg" alt="Instagram 最適化前" />
         </div>
         <div class="ba-col">
-          <div class="ba-col-header after">AFTER — 最適化後</div>
-          <img src="after_instagram.jpg" alt="Instagram最適化後" />
+          <div class="ba-col-header after">AFTER — 完全最適化</div>
+          <img src="after_instagram.jpg" alt="Instagram 最適化後" />
         </div>
       </div>
       <div class="ba-metrics">
         <div class="ba-metric">
           <div class="ba-metric-label">フォロワー数</div>
-          <div class="ba-metric-value">143人 → <strong>4,821人</strong><br/>地域の潜在顧客にリーチ</div>
+          <div class="ba-metric-value">143人 → <strong>4,821人（地域密着型）</strong><br/>サウスベイエリアの実際の見込み客</div>
         </div>
         <div class="ba-metric">
-          <div class="ba-metric-label">リール動画</div>
-          <div class="ba-metric-value">ゼロ → <strong>週3本の調理シーン・シズル動画</strong><br/>新規客来店率 +28%</div>
+          <div class="ba-metric-label">Reels・動画</div>
+          <div class="ba-metric-value">ゼロ → <strong>AI 最適化 Reels を週次で自動投稿</strong><br/>10秒の素材を撮るだけ。編集・GEO タグ・投稿はすべてこちらで対応</div>
         </div>
         <div class="ba-metric">
-          <div class="ba-metric-label">ストーリーハイライト</div>
-          <div class="ba-metric-value">なし → <strong>メニュー・イベント・レビューなど5カテゴリ</strong>を整備</div>
+          <div class="ba-metric-label">ストーリーズハイライト</div>
+          <div class="ba-metric-value">なし → <strong>5カテゴリに整理</strong><br/>メニュー・イベント・口コミ・特別メニュー・舞台裏</div>
         </div>
         <div class="ba-metric">
           <div class="ba-metric-label">予約導線</div>
-          <div class="ba-metric-value">なし → <strong>2タップ以内で予約完了</strong>できる導線を構築</div>
+          <div class="ba-metric-value">予約経路なし → <strong>タップ2回で予約完了</strong><br/>「行きたい」から「予約済み」までのハードルをゼロに</div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     AI / GEO SECTION
-═══════════════════════════════════════ -->
+<!-- AI / GEO -->
 <div class="ai-section">
   <div class="container">
     <div class="reveal">
-      <div class="ai-badge">🤖 2026年の新常識 — AI/GEO 対策</div>
-
+      <div class="ai-badge">🤖 2026年の現実 — AI Search Optimization</div>
       <div class="ai-quote">
-        「AIに無視される店は、<em>この街から消えていく。</em>」
+        「ChatGPT があなたのお店を知らなければ、<br/>
+        <em>すでに対策済みの競合に、お客様を奪われています。</em>」
       </div>
-
       <p class="section-lead">
-        ChatGPT・Gemini・Apple Intelligence——これらのAIが「Torrance で一番の店」として
-        貴店を指名するように、裏側のデータを構造化します。<br/>
+        「サウスベイ（もしくは市）でおすすめのレストランは？」と ChatGPT・Gemini・Siri に聞いたとき、表示される答えはランダムではありません。構造化データ・キーワード密度・オンライン上の権威性——この3つで決まります。<br/>
         <strong style="color:var(--white)">
-          （当社事例）AI推薦の“言及率”が最大+300%（30日）
+          （サウスベイマーケット戦略）構造化データ + GEO 最適化を実装した飲食店は、AI からの言及頻度が飛躍的に向上するメカニズムがあります。以下でその仕組みを解説します。
         </strong>
-        <span style="display:block; margin-top:10px; font-size:12px; line-height:1.6; color:rgba(255,255,255,0.55);">
-          ※定義：同一プロンプト×各AI×n回実行時の「店舗名が上位に出た回数」比較。業態/競合/地域により変動。
+        <span style="display:block; margin-top:10px; font-size:12px; line-height:1.8; color:rgba(255,255,255,0.55);">
+          ※AI への推薦頻度は、構造化データの充実度・キーワード権威性・レビューの更新速度に直接連動します。競合状況により個別の結果は異なります。
         </span>
       </p>
     </div>
-
-    <div class="ai-grid reveal" style="margin-top: 56px;">
+    <div class="ai-grid reveal">
       <div class="ba-col">
-        <div class="ai-col-header before">BEFORE — AI 対策なし</div>
-        <img src="before_ai_search.jpg" alt="AI検索最適化前" />
+        <div class="ai-col-header before">BEFORE — AI 最適化なし</div>
+        <img src="before_ai_search.jpg" alt="AI 検索 最適化前" />
       </div>
       <div class="ba-col">
-        <div class="ai-col-header after">AFTER — GEO 対策済み</div>
-        <img src="after_ai_search.jpg" alt="AI検索最適化後" />
+        <div class="ai-col-header after">AFTER — GEO 最適化済み</div>
+        <img src="after_ai_search.jpg" alt="AI 検索 最適化後" />
       </div>
     </div>
-
     <div class="ai-fact reveal">
-      <!-- 📊を消したい場合はこの行を削除するか、CSSで .ai-fact-icon {display:none;} -->
-
       <div class="ai-fact-text">
-        <strong>（当社事例）</strong> メニューのテキストデータ化・戦略的キーワード埋め込み・構造化データの最適化を実施することで、
-        ChatGPT や Gemini が「Torrance のおすすめレストランは？」と聞かれた際の
-        <strong>AI推薦の“言及率”が最大+300%（30日）</strong>を確認しています。<br/>
-        <span style="display:block; margin-top:10px; font-size:12px; line-height:1.6; color:rgba(255,255,255,0.55);">
-          ※定義：同一プロンプト×各AI×n回実行時の「店舗名が上位に出た回数」比較。業態/競合/地域により変動。
+        <strong>（データに基づく予測）</strong> ChatGPT や Gemini がレストランをサーフェスする際、3つの定量的シグナルに依存しています。<strong>構造化データマークアップ</strong>（機械可読なメニューとスキーマ）、<strong>キーワード権威性</strong>（全プラットフォームにわたる一貫した用語体系）、そして<strong>レビュー速度</strong>（レビューの量と新しさ）です。この3つを体系的に最適化することで、AI に推薦される条件を「偶然」ではなく「設計」によって整えます。サウスベイの飲食店の大半は GEO 戦略をゼロから始めます。その差が、あなたの優位性です。<br/>
+        <span style="display:block; margin-top:10px; font-size:12px; line-height:1.8; color:rgba(255,255,255,0.55);">
+          ※構造化データ研究および AI ランキングのベストプラクティスに基づく予測。競合状況・カテゴリにより個別の結果は異なります。
         </span>
       </div>
     </div>
   </div>
 </div>
-  
-<!-- ═══════════════════════════════════════
-     ROI NUMBERS
-═══════════════════════════════════════ -->
+
+<!-- ROI NUMBERS -->
 <div class="roi-numbers" id="roi">
   <div class="container">
     <div class="reveal">
-      <span class="label">ROI — 投資対効果</span>
+      <span class="label">ROI — 数字で見る投資対効果</span>
       <h2 class="section-title">
-        具体的な数字で<br/>
-        <span class="gold-text">費用対効果を証明します</span>
+        「やらない理由」が<br/>
+        <span class="gold-text">見つからない数字がここにあります</span>
       </h2>
       <p class="section-lead" style="margin-bottom: 0;">
-        「1日あたり1組の新規客（2〜4名）が増えるだけで回収可能」な価格設定です。
-        数字で見れば、このサービスを使わない理由はありません。
+        1晩に1テーブル追加で埋まれば、このサービスのコストは全額カバーされます。それ以上はすべて、これまで取り逃してきた純粋な利益です。
       </p>
     </div>
-
     <div class="roi-table-wrap reveal">
       <table class="roi-table">
         <thead>
           <tr>
             <th>指標</th>
-            <th>最適化前（現状）</th>
+            <th>Before（現状）</th>
             <th></th>
-            <th>最適化後（目標）</th>
-            <th>インパクト</th>
+            <th>After（目標）</th>
+            <th>あなたのお店への意味</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td class="metric-name">Googleルート検索数</td>
-            <td class="before-val">基準値</td>
+            <td class="metric-name">Google「経路を調べる」クリック数</td>
+            <td class="before-val">現状ベース</td>
             <td class="arrow">→</td>
             <td class="after-val">+10〜30%</td>
-            <td>写真刷新による来店見込み客の増加</td>
+            <td>実際に足を運んでくださるお客様が増える</td>
           </tr>
           <tr>
-            <td class="metric-name">新規客来店率</td>
-            <td class="before-val">基準値</td>
+            <td class="metric-name">新規来店客数</td>
+            <td class="before-val">現状ベース</td>
             <td class="arrow">→</td>
             <td class="after-val">+28%</td>
-            <td>保存されるSNS投稿戦略による増加</td>
+            <td>「保存したくなる」SNS コンテンツが新顔を呼ぶ</td>
           </tr>
           <tr>
-            <td class="metric-name">Google検索順位</td>
-            <td class="before-val">圏外</td>
+            <td class="metric-name">Google 検索順位</td>
+            <td class="before-val">2ページ目以降</td>
             <td class="arrow">→</td>
-            <td class="after-val">TOP 3</td>
-            <td>レビュー管理・24時間以内返信の徹底</td>
+            <td class="after-val">トップ3</td>
+            <td>レビュー管理 + 24時間以内返信プロトコル</td>
           </tr>
           <tr>
-            <td class="metric-name">AI推奨率（GEO）</td>
+            <td class="metric-name">AI 推薦頻度（GEO）</td>
             <td class="before-val">ほぼゼロ</td>
             <td class="arrow">→</td>
-            <td class="after-val">+300%</td>
-            <td>メニューのAI仕様化・キーワード構造化</td>
+            <td class="after-val">大幅な改善</td>
+            <td>構造化データ + AI 可読メニューテキスト</td>
           </tr>
           <tr>
-            <td class="metric-name">Instagramフォロワー</td>
+            <td class="metric-name">Instagram フォロワー数</td>
             <td class="before-val">143人</td>
             <td class="arrow">→</td>
             <td class="after-val">4,000人以上</td>
-            <td>週3本リール・保存型コンテンツ戦略</td>
+            <td>週次 AI 最適化 Reels + 自動投稿パイプライン</td>
           </tr>
           <tr>
             <td class="metric-name">レビュー返信率</td>
             <td class="before-val">0%</td>
             <td class="arrow">→</td>
-            <td class="after-val">100%（24h以内）</td>
-            <td>信頼性向上・検索アルゴリズム優遇</td>
+            <td class="after-val">24時間以内に100%</td>
+            <td>信頼構築 + Google ランキングアルゴリズムへの好影響</td>
           </tr>
         </tbody>
       </table>
     </div>
-
-    <div class="roi-cards-row reveal" style="margin-top: 64px;">
-      <div class="roi-card">
-        <div class="roi-card-plan">Starter</div>
-        <div class="roi-card-price">$900</div>
-        <div class="roi-card-period">初月限定・お試し価格</div>
-        <ul class="roi-card-features">
-          <li>Google Business Profile 完全最適化</li>
-          <li>プロ写真 30枚以上アップロード</li>
-          <li>既存レビュー全件返信</li>
-          <li>Instagram プロフィール最適化</li>
-          <li>競合分析レポート（PDF）</li>
-        </ul>
-        <a href="#contact" class="btn-outline" style="display:block; text-align:center; padding:14px 24px; font-size:13px;">まず試してみる</a>
-      </div>
-      <div class="roi-card featured">
-        <div class="roi-card-badge">最もお得・推奨プラン</div>
-        <div class="roi-card-plan" style="margin-top:28px;">Growth</div>
-        <div class="roi-card-price">$1,500</div>
-        <div class="roi-card-period">月額・完全丸投げプラン（目安：1日あたり約$50）</div>
-<div style="font-size:12px;color:rgba(255,255,255,0.6);margin:-18px 0 22px;">
-  写真・GBP・レビュー・SNS・月次レポート込み
+  </div>
 </div>
-        <ul class="roi-card-features">
-          <li>Starter の全施策 ＋</li>
-          <li>週1回 Google 投稿（毎月4回）</li>
-          <li>週3本 Instagram リール投稿</li>
-          <li>AI 検索（GEO）対策・毎月更新</li>
-          <li>Yelp 最適化・レビュー返信</li>
-          <li>月次レポート（数字で成果報告）</li>
-          <li>新規レビューへの 24h 以内返信</li>
+
+<!-- WHY MIKA -->
+<section style="background: var(--dark2); padding: 90px 28px; text-align: center; border-top: 1px solid rgba(201,168,76,0.12); border-bottom: 1px solid rgba(201,168,76,0.12);">
+  <div class="container">
+    <div class="reveal">
+      <span class="label">Your Partner</span>
+      <h2 class="section-title">なぜ、<span class="gold-text">Mika に依頼するのか</span></h2>
+      <p class="section-lead" style="margin: 0 auto 56px; max-width: 760px;">
+        私は SNS 運用代行者ではありません。<strong style="color:var(--white);">Fractional Director ＆ Business Architect</strong>として15年のキャリアを持ち、最新テクノロジーと組織改革を組み合わせることで、大手ブランドの売上を1,500%成長させてきた実績があります。
+      </p>
+    </div>
+    <div class="reveal" style="display:flex; justify-content:center; gap:3px; flex-wrap:wrap;">
+      <div style="flex:1; min-width:240px; background:var(--dark3); padding:40px 28px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, transparent, var(--gold), transparent);"></div>
+        <div style="font-family:'Montserrat',sans-serif; font-weight:900; font-size:clamp(32px,4vw,48px); margin-bottom:10px;" class="gold-text">15年以上</div>
+        <p style="font-size:14px; color:var(--gray-light); line-height:1.8;">経営・オペレーション・マーケティングの統合的な実務経験</p>
+      </div>
+      <div style="flex:1; min-width:240px; background:var(--dark3); padding:40px 28px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, transparent, var(--gold), transparent);"></div>
+        <div style="font-family:'Montserrat',sans-serif; font-weight:900; font-size:clamp(32px,4vw,48px); margin-bottom:10px;" class="gold-text">$15M 規模</div>
+        <p style="font-size:14px; color:var(--gray-light); line-height:1.8;">支援してきたブランドの売上成長実績</p>
+      </div>
+      <div style="flex:1; min-width:240px; background:var(--dark3); padding:40px 28px; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg, transparent, var(--gold), transparent);"></div>
+        <div style="font-family:'Montserrat',sans-serif; font-weight:900; font-size:clamp(32px,4vw,48px); margin-bottom:10px;" class="gold-text">地域密着</div>
+        <p style="font-size:14px; color:var(--gray-light); line-height:1.8;">Redondo Beach 在住。サウスベイを知り尽くしたローカル目線</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<div style="background: var(--black); padding: 80px 0 110px;">
+  <div class="container">
+    <div class="reveal" style="text-align:center; margin-bottom: 0;">
+      <span class="label">Pricing</span>
+      <h2 class="section-title">あなたの状況に合わせた<span class="gold-text"> 3つのプラン</span></h2>
+    </div>
+    <div class="new-pricing-row reveal">
+
+      <!-- DIY BLUEPRINT -->
+      <div class="np-card">
+        <h3>DIY Blueprint</h3>
+        <p class="np-sub">基盤を構築する。運用はご自身で。</p>
+        <div class="np-anchor"></div>
+        <div class="np-setup">初期費用（一括）</div>
+        <div class="np-price">$1,500</div>
+        <ul class="np-features">
+          <li>Google ビジネスプロフィール 完全リニューアル＆プロ写真</li>
+          <li>AI / GEO 対応メニューマークアップ</li>
+          <li>競合分析レポート</li>
+          <li>30日間コンテンツ運用プレイブック</li>
+          <li class="off">週次 AI 最適化 Reels</li>
+          <li class="off">24時間以内レビュー返信プロトコル</li>
         </ul>
-        <a href="#contact" class="btn-gold" style="display:block; text-align:center; padding:14px 24px; font-size:13px;">今すぐ始める</a>
+        <a href="#contact" class="btn-outline" style="display:block; text-align:center; padding:13px 24px; font-size:13px;">Blueprint を受け取る</a>
+        <p class="np-microcopy">データに基づく分析のみ。押し売りは一切ありません。</p>
+      </div>
+
+      <!-- GROWTH PARTNER -->
+      <div class="np-card popular">
+        <div class="np-badge">Case Study Offer — 残り2枠</div>
+        <h3 style="margin-top:18px;">Growth Partner</h3>
+        <p class="np-sub">完全おまかせ。成長はこちらで担います。</p>
+        <div class="np-anchor">通常価格：$3,000 / 月</div>
+        <div class="np-setup">初期費用 $1,500 +</div>
+        <div class="np-price">$1,200<span>/ 月</span></div>
+        <ul class="np-features">
+          <li><strong style="color:var(--white);">Blueprint の全内容を含む初期構築済み、さらに：</strong></li>
+          <li>週次 AI 最適化 Reels — <strong style="color:var(--white);">編集はすべてこちらで対応</strong></li>
+          <li><strong style="color:var(--white);">24時間以内レビュー全件返信</strong>（オーナー様の手間ゼロ）</li>
+          <li>月4回 SEO 最適化 Google 投稿</li>
+          <li>月次 ROI ＆ 成長パフォーマンスレポート</li>
+          <li class="off">出張プロ撮影（オンサイト）</li>
+        </ul>
+        <a href="#contact" class="btn-gold" style="display:block; text-align:center; padding:13px 24px; font-size:13px;">Case Study 枠を確保する</a>
+        <p class="np-microcopy">※事例としてのデータ提供が条件となります。</p>
+      </div>
+
+      <!-- FRACTIONAL CMO -->
+      <div class="np-card">
+        <h3>Fractional CMO</h3>
+        <p class="np-sub">エンタープライズ級のデジタル戦略を。</p>
+        <div class="np-anchor"></div>
+        <div class="np-setup">初期費用 $0</div>
+        <div class="np-price">$4,500<span>/ 月</span></div>
+        <ul class="np-features">
+          <li><strong style="color:var(--white);">Growth Partner の全内容を含む、さらに：</strong></li>
+          <li>隔週出張プロ撮影（オンサイト）</li>
+          <li>地域インフルエンサー マネジメント</li>
+          <li>SNS 全面運用代行</li>
+          <li>四半期ごとのメニュー戦略コンサルティング</li>
+          <li>24時間 優先サポート対応</li>
+        </ul>
+        <a href="#contact" class="btn-outline" style="display:block; text-align:center; padding:13px 24px; font-size:13px;">パートナーシップを申し込む</a>
+        <p class="np-microcopy">※受付枠に限りがあります。</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     PLAN TIMELINE
-═══════════════════════════════════════ -->
+<!-- PLAN TIMELINE -->
 <div class="plan-section">
   <div class="container">
     <div class="reveal">
       <span class="label">Execution Plan</span>
       <h2 class="section-title">
-        すべて丸投げでOK。<br/>
-        <span class="gold-text">私が動きます。</span>
+        オーナー様はお店に集中してください。<br/>
+        <span class="gold-text">デジタルはすべて、こちらで動かします。</span>
       </h2>
       <p class="section-lead">
-        オーナー様にしていただくことは、最初の30分だけです。
-        あとはすべて私が責任を持って実行します。
+        最初の30分、情報共有の時間をいただければ十分です。あとは完全におまかせ——最初の1週間以内に成果が見え始めます。
       </p>
     </div>
-
     <div class="timeline reveal">
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-phase">Day 1〜3</div>
-        <div class="tl-title">Google Business Profile 完全最適化</div>
+        <div class="tl-title">Google ビジネスプロフィール — 完全リニューアル</div>
         <ul class="tl-list">
-          <li>正確なカテゴリ・営業時間・電話番号・住所の設定・修正</li>
-          <li>高画質な料理・店内・外観写真を 30 枚以上アップロード</li>
-          <li>全メニューのテキスト入力と価格設定</li>
-          <li>SEO キーワード入りの魅力的なビジネス説明文の作成</li>
-          <li>既存レビューへの返信（24 時間以内ルールの確立）</li>
+          <li>営業時間・カテゴリ・電話番号・住所・属性情報の修正・認証</li>
+          <li>料理・内装・外観のプロ写真30枚以上をアップロード＆タグ設定</li>
+          <li>説明文・価格・写真付きのフルメニューを掲載</li>
+          <li>地域キーワードを盛り込んだ SEO 最適化の事業紹介文を作成</li>
+          <li>既存のレビュー全件に返信し、「24時間以内返信」の基準を確立</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-phase">Day 4〜7</div>
-        <div class="tl-title">Instagram プロフィール & コンテンツ戦略構築</div>
+        <div class="tl-title">Instagram プロフィール再構築 ＆ コンテンツ戦略</div>
         <ul class="tl-list">
-          <li>プロフィール文・ハイライト・リンクの最適化</li>
-          <li>週3本のリール動画テンプレート・投稿スケジュール設計</li>
-          <li>「デート向け席紹介」「シェフのおすすめ」等の保存されやすい投稿設計</li>
-          <li>2 タップ以内で予約できるリンクツリー構築</li>
+          <li>プロフィール文を書き直し、ハイライトを整理、予約リンクを設置</li>
+          <li>週次 Reels スケジュールを設計（調理クリップ・シズルショット・舞台裏）</li>
+          <li>「保存したくなる」コンテンツのフレームワーク構築（デートナイト・シェフのおすすめ等）</li>
+          <li>プロフィール閲覧から2タップで予約完了できる動線を構築</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-phase">Week 2</div>
-        <div class="tl-title">AI 検索（GEO）対策 & Yelp 最適化</div>
+        <div class="tl-title">AI Search（GEO）最適化 ＋ Yelp 整備</div>
         <ul class="tl-list">
-          <li>メニューの AI 読み取り最適化テキストデータ化</li>
-          <li>ChatGPT・Gemini・Apple Intelligence 向けキーワード戦略の実装</li>
-          <li>Yelp プロフィールの完全最適化とレビュー返信体制の構築</li>
-          <li>競合分析レポートの提出</li>
+          <li>メニューを AI 可読な構造化テキストデータに変換</li>
+          <li>ChatGPT・Gemini・Apple Intelligence 向けのキーワード戦略を実装</li>
+          <li>Yelp プロフィールの完全最適化とレビュー返信体制を構築</li>
+          <li>競合分析レポートを納品——市内の競合との差を可視化</li>
         </ul>
       </div>
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-phase">Month 1〜 継続</div>
-        <div class="tl-title">継続運用 & 月次レポート</div>
+        <div class="tl-phase">Month 1 以降 — 継続運用</div>
+        <div class="tl-title">継続管理 ＆ 月次レポート</div>
         <ul class="tl-list">
-          <li>週1回の Google 投稿（新メニュー・イベント・季節情報）</li>
-          <li>週3本の Instagram リール・フィード投稿</li>
-          <li>新規レビューへの 24 時間以内返信</li>
-          <li>月次レポート：検索順位・来店数・フォロワー増加数の報告</li>
+          <li>週4回 Google 投稿：季節限定メニュー・イベント・舞台裏</li>
+          <li>週次 AI 最適化 Reels の自動投稿——10秒の素材を撮るだけ。編集・GEO タグ・投稿はすべてこちらで対応</li>
+          <li>すべての新規レビューに24時間以内に返信——例外なし</li>
+          <li>月次レポートをお届け：順位・流入・フォロワー増加・新規客データ</li>
         </ul>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     GUARANTEE
-═══════════════════════════════════════ -->
+<!-- GUARANTEE -->
 <div class="guarantee-section">
   <div class="container">
     <div class="reveal">
-      <span class="label">Risk-Free Guarantee</span>
+      <span class="label">Zero-Risk Guarantee</span>
       <h2 class="section-title">
-        リスクゼロの<br/>
-        <span class="gold-text">成果保証</span>
+        成果がなければ、<br/>
+        <span class="gold-text">費用はいただきません。それだけです。</span>
       </h2>
     </div>
-
     <div class="guarantee-box reveal">
       <div class="guarantee-icon">🛡️</div>
-      <div class="guarantee-title">数字が変わらなければ、追加費用はゼロ</div>
+      <div class="guarantee-title">動かなければ、請求しない</div>
       <p class="guarantee-text">
-        初月の施策実施後、<strong>Google 検索順位・ルート検索数・Instagram フォロワー数</strong>のいずれかに
-        改善が見られない場合、翌月の費用は一切いただきません。
-        それだけ私は自分の仕事に自信を持っています。
+        最初の1ヶ月で<strong>Google の検索順位・「経路を調べる」クリック数・Instagram フォロワー数</strong>のいずれも改善しなかった場合、翌月の費用は一切いただきません。この仕事に、全力でコミットします。
       </p>
-<p style="max-width:720px;margin:18px auto 0;font-size:14px;line-height:1.8;color:#bbb;">
-  初月は「成果保証」ではなく「実行保証」です。合意したタスク（例：写真30枚、カテゴリ最適化、メニュー入力、レビュー返信テンプレ整備、投稿4本など）を期日までに完了できなかった場合、未実施分は返金します。
-</p>
-      <a href="#contact" class="btn-gold">今すぐ無料診断を受ける</a>
+      <p style="max-width:720px;margin:0 auto 32px;font-size:14px;line-height:1.9;color:#bbb;">
+        <strong style="color:#ddd;">完全な透明性：</strong>初月は「実行の保証」であり、「売上の保証」ではありません。合意した納品物（写真30枚・カテゴリ最適化・メニュー入力・レビュー返信・投稿4本）が期日通りに完了しなかった場合は、未完了分を日割りで返金します。交渉は不要です。
+      </p>
+      <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+        <a href="#contact" class="btn-gold">無料診断を受ける — 完全無料・ご提案なし</a>
+        <p class="cta-micro">データに基づく分析のみ。押し売りは一切ありません。24時間以内にPDFレポートをお届けします。</p>
+      </div>
     </div>
-
     <table class="compare-table reveal">
       <thead>
         <tr>
           <th>比較項目</th>
-          <th>自社対応（DIY）</th>
-          <th>当サービス</th>
+          <th>ご自身で対応する場合</th>
+          <th>Mika に依頼する場合</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td class="feat">Google 最適化にかかる週間工数</td>
-          <td class="no">5〜10 時間 / 週</td>
-          <td class="yes">✓ 完全丸投げ・ゼロ時間</td>
+          <td class="feat">週あたりの所要時間</td>
+          <td class="no">毎週5〜10時間の作業が必要</td>
+          <td class="yes">✓ ゼロ。完全におまかせ</td>
         </tr>
         <tr>
-          <td class="feat">専門知識の習得コスト</td>
-          <td class="no">数ヶ月の学習が必要</td>
-          <td class="yes">✓ 即日実行・即効果</td>
+          <td class="feat">学習コスト</td>
+          <td class="no">効果が出るまで数ヶ月の試行錯誤</td>
+          <td class="yes">✓ 数ヶ月でなく、数日で成果が出始める</td>
         </tr>
         <tr>
-          <td class="feat">AI 検索（GEO）対策</td>
-          <td class="no">✗ 対応困難</td>
-          <td class="yes">✓ 最新手法で完全対応</td>
+          <td class="feat">AI Search（GEO）最適化</td>
+          <td class="no">✗ 専門知識なしには事実上不可能</td>
+          <td class="yes">✓ 最新手法で完全実装済み</td>
         </tr>
         <tr>
-          <td class="feat">月次成果レポート</td>
-          <td class="no">✗ なし</td>
-          <td class="yes">✓ 毎月数字で報告</td>
+          <td class="feat">月次パフォーマンスレポート</td>
+          <td class="no">✗ すべて自分で計測・集計が必要</td>
+          <td class="yes">✓ わかりやすい数字で毎月お届け</td>
         </tr>
         <tr>
           <td class="feat">成果が出なかった場合のリスク</td>
-          <td class="no">時間・費用が無駄に</td>
-          <td class="yes">✓ 追加費用ゼロ保証</td>
+          <td class="no">時間を失い、それでも成果ゼロ</td>
+          <td class="yes">✓ 成果なし = 請求なし。完全に守られます</td>
         </tr>
         <tr>
-          <td class="feat">競合との差別化スピード</td>
-          <td class="no">数ヶ月〜1年以上</td>
-          <td class="yes">✓ 最短 3 日〜1 週間</td>
+          <td class="feat">競合を追い抜くスピード</td>
+          <td class="no">継続的な努力で6ヶ月〜1年以上</td>
+          <td class="yes">✓ 開始後3〜7日で可視化できる変化が出始める</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     URGENCY
-═══════════════════════════════════════ -->
+<!-- URGENCY -->
 <div class="urgency-section">
   <h2 class="urgency-title">
-    今この瞬間も、<br/>
-    <span class="red-text">競合はあなたの顧客を奪っています</span>
+    1日待つたびに、<br/>
+    <span class="red-text">本来あなたを選んだはずのお客様が、競合店に入っています</span>
   </h2>
   <p class="urgency-body">
-    Torrance には多くのレストランが存在します。デジタル最適化を先に実施したお店が、
-    検索結果・AI 推奨・SNS のすべてで優位に立ちます。
-    <strong>先行者利益は、今動いたお店だけが手にできます。</strong>
+    サウスベイの飲食シーンは激しい競争状態にあります。デジタル施策を先に動かした店舗が Google の順位・AI 推薦・SNS フォロワーを固め、後から追うほど差は開く一方です。<strong>先行者優位は実在します——行動した人のものです。</strong>
   </p>
   <div class="counters">
     <div class="counter">
       <div class="counter-num" id="cnt-a">0</div>
-      <div class="counter-lbl">今日逃した来店見込み客</div>
+      <div class="counter-lbl">今日だけで逃した見込み客数（推定）</div>
     </div>
     <div class="counter">
       <div class="counter-num" id="cnt-b">$0</div>
-      <div class="counter-lbl">推定：取りこぼしの可能性</div>
+      <div class="counter-lbl">テーブルに置き去りにした売上（推定）</div>
     </div>
     <div class="counter">
       <div class="counter-num" id="cnt-c">0</div>
-      <div class="counter-lbl">対策なしで経過した日数</div>
+      <div class="counter-lbl">競合がすでに先行している日数</div>
     </div>
   </div>
-  <a href="#contact" class="btn-gold" style="font-size:16px; padding:20px 64px;">
-    今すぐ無料診断 → 損失を止める
-  </a>
+  <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+    <a href="#contact" class="btn-gold" style="font-size:16px; padding:20px 64px;">
+      無料診断を受ける → 今すぐ流出を止める
+    </a>
+    <p class="cta-micro">データに基づく分析のみ。押し売りは一切ありません。24時間以内にPDFレポートをお届けします。</p>
+  </div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     FINAL CTA
-═══════════════════════════════════════ -->
+<!-- FINAL CTA -->
 <div class="cta-section" id="contact">
   <span class="label">Contact</span>
   <h2 class="cta-title">
-    まず<span class="gold-text"> 30分の無料診断 </span>から<br/>
-    始めましょう
+    まず<span class="gold-text">無料30分診断</span>から。<br/>
+    提案なし。データだけをお持ちします。
   </h2>
   <p class="cta-body">
-    現状のデジタル集客の課題を診断し、具体的な改善プランをその場でご提案します。
-    費用は一切かかりません。
+    あなたのお店がオンラインでどこで機会を失っているか、競合が何をしているか、現実的な改善プランとはどんなものか——費用も義務も一切なしにお伝えします。
   </p>
-
   <div class="gold-line"></div>
-
   <div class="contact-card">
-    <!-- Chat: SMSアプリを開く（表示はChatのみ） -->
     <div class="contact-row">
       <div class="contact-ico">📱</div>
-      <a href="sms:+13103081781" style="color:inherit; text-decoration:none;">Chat</a>
+      <a href="sms:+13103081781" style="color:inherit; text-decoration:none; font-weight:600;">SMS で直接ご連絡</a>
     </div>
-
-    <!-- Email: アドレスは表示せず、メーラーを開く -->
     <div class="contact-row">
       <div class="contact-ico">📧</div>
-      <a href="/cdn-cgi/l/email-protection#3d50135352535c565c7d5c565c5352531054534951135e5250" style="color:inherit; text-decoration:none;">Email</a>
+      <a href="mailto:info@example.com" style="color:inherit; text-decoration:none; font-weight:600;">メールを送る</a>
     </div>
-
     <a href="https://calendly.com/m-nonaka-akanon-intl/30min" class="btn-gold" style="width:100%; text-align:center; margin-top:12px;">
-      今すぐ無料診断を予約する
+      無料30分診断を予約する →
     </a>
+    <p class="cta-micro" style="text-align:center; width:100%;">データに基づく分析のみ。押し売りは一切ありません。24時間以内にPDFレポートをお届けします。</p>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════
-     FOOTER
-═══════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-brand gold-text">Digital Growth Consulting</div>
-  <p>Torrance Restaurant — Digital Marketing Proposal 2026</p>
-  <p style="margin-top:8px; font-size:11px; opacity:0.5;">© 2026 All Rights Reserved. Confidential.</p>
+  <p>サウスベイレストラン — デジタルマーケティング提案書 2026</p>
+  <p style="margin-top:8px; font-size:11px; opacity:0.5;">© 2026 All Rights Reserved. 秘密厳守。</p>
 </footer>
 
-<!-- ═══════════════════════════════════════
-     SCRIPTS
-═══════════════════════════════════════ -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Reveal on scroll
+<script>
   const revealEls = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
   }, { threshold: 0.08 });
   revealEls.forEach(el => revealObserver.observe(el));
 
-  // Animated counters
   function runCounter(el, end, prefix, suffix, dur) {
     let cur = 0;
     const step = end / (dur / 16);
@@ -1869,68 +1060,34 @@ line-height: 1;
   const urgencyObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
-        runCounter(document.getElementById('cnt-a'), 47, '', '人', 2000);
+        runCounter(document.getElementById('cnt-a'), 47, '', '', 2000);
         runCounter(document.getElementById('cnt-b'), 1200, '$', '', 2000);
-        runCounter(document.getElementById('cnt-c'), 30, '', '日', 2000);
-ncyObs.disconnect();
+        runCounter(document.getElementById('cnt-c'), 30, '', '', 2000);
+        urgencyObs.disconnect();
       }
     });
   }, { threshold: 0.4 });
   urgencyObs.observe(document.querySelector('.urgency-section'));
 
-  // ─────────────────────────────────────
-  // 損失シミュレーター 計算ロジック
-  // ─────────────────────────────────────
   function calculateLoss() {
     const city = document.getElementById('sim-city').value;
     const cuisine = document.getElementById('sim-cuisine').value;
-
-    if (!city || !cuisine) {
-      alert('エリアとジャンルを両方選択してください。');
-      return;
-    }
-
-    // 選択値を結果テキストに反映
+    if (!city || !cuisine) { alert('エリアとジャンルを両方選択してください。'); return; }
     document.getElementById('res-city').innerText = city;
     document.getElementById('res-cuisine').innerText = cuisine;
-
-    // 都市・ジャンルごとの係数（リアル感を演出）
-    const cityFactor = {
-      'Manhattan Beach': 1.3,
-      'Hermosa Beach': 1.15,
-      'Redondo Beach': 1.1,
-      'Torrance': 1.0,
-      'Gardena': 0.9
-    };
-    const cuisineFactor = {
-      'イタリアン': 1.2,
-      '寿司・日本料理': 1.25,
-      'メキシカン': 1.0,
-      'ステーキ・アメリカン': 1.1,
-      'シーフード': 0.95
-    };
-
-    const base = 8500;
-    const random = Math.floor(Math.random() * 3000) + 1500;
-    const cf = cityFactor[city] || 1.0;
-    const kf = cuisineFactor[cuisine] || 1.0;
-    const totalLoss = Math.round((base + random) * cf * kf);
-
-    // 結果を表示
+    const baseLoss = 8500;
+    const randomFactor = Math.floor(Math.random() * 5000) + 2000;
+    const totalLoss = baseLoss + randomFactor;
     const resultDiv = document.getElementById('sim-result');
     resultDiv.classList.remove('hidden');
-
-    // カウントアップアニメーション（既存のrunCounterを流用）
     const amountEl = document.getElementById('sim-amount');
     let cur = 0;
     const step = totalLoss / (1800 / 16);
-    const timer = setInterval(() => {
+    const t = setInterval(() => {
       cur = Math.min(cur + step, totalLoss);
       amountEl.textContent = '$' + Math.floor(cur).toLocaleString();
-      if (cur >= totalLoss) clearInterval(timer);
+      if (cur >= totalLoss) clearInterval(t);
     }, 16);
-
-    // 結果欄までスムーズスクロール
     resultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 </script>
